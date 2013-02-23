@@ -48,9 +48,13 @@ class Karipap {
     /**
      * execute prepared statement 
      */
-    public function query($sql, $vars) {
+    public function query($sql, $vars=array()) {
         $this->statement = $this->db->prepare($sql);
-        $this->statement->execute($vars);
+        if (isset($vars)) {
+            $this->statement->execute($vars);
+        }else {
+            $this->statement->execute();
+        }
     }
     
     /**
