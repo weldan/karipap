@@ -4,18 +4,7 @@
  * weldan jamili <mweldan@gmail.com>
  * http://mweldan.com
  */
-interface Dhal {
-    public function __construct($database, $user, $pass, $host);    
-    public function connect();
-    public function raw($sql);
-    public function query($sql, $vars);
-    public function getRows();
-    public function getResult();
-    public function create($table, $fields);
-    public function delete($table, $id);
-}
-
-class Karipap implements Dhal {
+class Karipap {
     
     public $connection = false;
     public $id = "id";
