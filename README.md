@@ -1,12 +1,9 @@
-karipap
+##Karipap
 =======
 
-a data access object class (sort of)
+at first what i want to achieve was to understand data access object pattern, but somehow someone pointed me out this 
+is abstraction layer. did some google search and found about object relational mapper. 
 
-in quest of dao. resources:
-* http://en.wikipedia.org/wiki/Data_access_object
-* http://stackoverflow.com/questions/11266388/php-data-access-object
-* http://www.odi.ch/prog/design/php/guide.php
-* http://blog.chrisdlangton.com/index.php?article=50#.USagPHwu6DU
-* http://www.sunilb.com/php/php5-tutorials-abstract-class-and-interface
-* http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers
+so this is somewhat can be called as orm. i think. 
+
+
