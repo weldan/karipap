@@ -43,6 +43,7 @@ class Karipap {
      */
     public function raw($sql) {
         $this->statement = $this->db->query($sql);
+        return $this;
     }
     
     /**
@@ -55,6 +56,7 @@ class Karipap {
         }else {
             $this->statement->execute();
         }
+        return $this;
     }
     
     /**
@@ -84,7 +86,7 @@ class Karipap {
         $sql .= $sql_values;
         
         $this->statement = $this->db->prepare($sql);
-        $this->statement->execute($values);
+        return $this->statement->execute($values);
     }
     
     /**
@@ -94,7 +96,7 @@ class Karipap {
         $sql = "delete from `".$table."` ";
         $sql .= "where `".$this->id."` = ?";
         $this->statement = $this->db->prepare($sql);
-        $this->statement->execute(array($id));
+        return $this->statement->execute(array($id));
     }
     
     /**
